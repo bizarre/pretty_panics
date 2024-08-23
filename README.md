@@ -5,7 +5,7 @@
 If `use-default-features` is enabled, `pretty_panic` will provide default formatters for panics and errors.
 
 ```rust
-use pretty_panic::pretty_panic;
+use pretty_panics::pretty_panic;
 
 #[pretty_panic]
 fn main() -> std::result::Result<(), SomeDisplayError> {
@@ -14,7 +14,7 @@ fn main() -> std::result::Result<(), SomeDisplayError> {
 ```
 
 ```rust
-use pretty_panic::pretty_panic;
+use pretty_panics::pretty_panic;
 use thiserror::Error;
 
 #[derive(Error, Debug)]
