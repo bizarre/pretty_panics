@@ -1,8 +1,8 @@
-# pretty_panic
+# pretty_panics
 
-`pretty_panic` is a crate that provides an easy way to customize panic messages and error messages.
+`pretty_panics` is a crate that provides an easy way to customize panic messages and error messages.
 
-If `use-default-features` is enabled, `pretty_panic` will provide default formatters for panics and errors.
+If `use-default-features` is enabled, `pretty_panics` will provide default formatters for panics and errors.
 
 ```rust
 use pretty_panics::pretty_panic;
