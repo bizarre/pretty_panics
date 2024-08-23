@@ -9,11 +9,7 @@ enum SimpleError {
     AnError,
 }
 
-fn error_formatter(error: &SimpleError) -> String {
-    format!("uhhh something broke guys... {error}")
-}
-
-#[pretty_panic(formatter = error_formatter)]
+#[pretty_panic]
 fn main() -> anyhow::Result<(), SimpleError> {
     Result::<(), SimpleError>::Err(SimpleError::AnError).unwrap();
     Ok(())
