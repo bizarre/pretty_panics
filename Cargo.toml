@@ -1,0 +1,17 @@
+[package]
+name = "pretty_panic"
+version = "0.1.0"
+edition = "2021"
+homepage = "https://github.com/bizarre/pretty_panic"
+
+[dependencies]
+pretty_panic_proc_macro = { path = "pretty_panic_proc_macro", no-default-features = true }
+anstyle = { version = "1.0.8", optional = true }
+
+[features]
+default = ["default_formatters"]
+default_formatters = ["anstyle", "pretty_panic_proc_macro/default_formatters"]
+
+[dev-dependencies]
+anyhow = "1.0"
+thiserror = "1.0"
