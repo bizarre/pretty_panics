@@ -6,7 +6,7 @@ use thiserror::Error;
 #[derive(Error, Debug)]
 enum SimpleError {
     #[error("Broken")]
-    AnError
+    AnError,
 }
 
 fn error_formatter(error: &SimpleError) -> String {
