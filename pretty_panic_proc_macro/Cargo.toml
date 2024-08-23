@@ -2,6 +2,8 @@
 name = "pretty_panic_proc_macro"
 version = "0.1.0"
 edition = "2021"
+license = "MIT"
+description = "proc-macro for pretty_panic"
 
 [dependencies]
 syn = {version = "2.0.75", features = ["full"]}

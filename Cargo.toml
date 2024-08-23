@@ -3,9 +3,11 @@ name = "pretty_panic"
 version = "0.1.0"
 edition = "2021"
 homepage = "https://github.com/bizarre/pretty_panic"
+license = "MIT"
+description = "pretty panic messages"
 
 [dependencies]
-pretty_panic_proc_macro = { path = "pretty_panic_proc_macro", no-default-features = true }
+pretty_panic_proc_macro = { version = "0.1.0", no-default-features = true, path = "pretty_panic_proc_macro" }
 anstyle = { version = "1.0.8", optional = true }
 
 [features]
