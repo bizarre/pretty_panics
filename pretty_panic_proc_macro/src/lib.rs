@@ -36,7 +36,7 @@ pub fn pretty_panic(attrs: TokenStream, input: TokenStream) -> TokenStream {
         quote! { #format_error }
     } else {
         if cfg!(feature = "default_formatters") {
-            quote! { pretty_panic::default_formatters::error_formatter }
+            quote! { pretty_panics::default_formatters::error_formatter }
         } else {
             abort_call_site!(
                 "`formatter` not provided and `default_formatters` feature is not enabled."
@@ -48,7 +48,7 @@ pub fn pretty_panic(attrs: TokenStream, input: TokenStream) -> TokenStream {
         quote! { eprintln!("{}", #format_panic(panic_hook_info, message.to_string())); }
     } else {
         if cfg!(feature = "default_formatters") {
-            quote! { eprintln!("{}", pretty_panic::default_formatters::panic_formatter(panic_hook_info, message.to_string())); }
+            quote! { eprintln!("{}", pretty_panics::default_formatters::panic_formatter(panic_hook_info, message.to_string())); }
         } else {
             abort_call_site!(
                 "`panic_formatter` not provided and `default_formatters` feature is not enabled."

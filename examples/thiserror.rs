@@ -1,6 +1,6 @@
-extern crate pretty_panic;
+extern crate pretty_panics;
 
-use pretty_panic::pretty_panic;
+use pretty_panics::pretty_panic;
 use thiserror::Error;
 
 #[derive(Error, Debug)]
